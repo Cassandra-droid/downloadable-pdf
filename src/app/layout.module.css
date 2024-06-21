@@ -1,0 +1,38 @@
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    position: relative;
+    height: 80px; 
+    background-image: url('/assets/header.png'); /* Path to header image */
+    background-size:contain;
+    background-repeat: no-repeat; 
+    background-position: top left; 
+    padding: 10px; 
+    display: flex;
+    align-items: center; 
+  }
+  
+  .main {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .footer {
+    position: relative;
+    height: 60px; 
+    background-image: url('/assets/footer.png'); /* Path to footer image */
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: bottom center; 
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  
+  
