@@ -4,7 +4,7 @@ const Link: React.FC = () => {
   const pageTitle = "Your Specified Page Title";
   const pageDescription = "Description of your specified page.";
   const pageUrl = "https://downloadable-pdf.vercel.app/link";
-  const pageImageUrl = "https://downloadable-pdf.vercel.app/assets/table.png";
+  const pageImageUrl = "/assets/table.png";
 
   return (
     <>
