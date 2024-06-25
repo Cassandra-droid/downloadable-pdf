@@ -9,9 +9,12 @@ const Page: React.FC = () => {
         <meta property="og:description" content=" Rich Link Preview Demo." />
         <meta
           property="og:image"
-          content="http://localhost:3000/assets/header.png"
+          content="https://downloadable-pdf.vercel.app/assets/header.png"
         />
-        <meta property="og:url" content="http://localhost:3000/link" />
+        <meta
+          property="og:url"
+          content="https://downloadable-pdf.vercel.app/link"
+        />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <div>
