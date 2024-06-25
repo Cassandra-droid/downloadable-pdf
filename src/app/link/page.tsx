@@ -1,13 +1,13 @@
+
 import Head from 'next/head';
 
-type Props = {
-  pageTitle: string;
-  pageDescription: string;
-  pageImageUrl: string;
-  pageUrl: string;
-};
+const Link = async () => {
 
-const Page: React.FC<Props> = ({ pageTitle, pageDescription, pageImageUrl, pageUrl }) => {
+  const pageTitle = 'Your Specified Page Title';
+  const pageDescription = 'Description of your specified page.';
+  const pageImageUrl = '/assets/table.png'; // Ensure this path is correct
+  const pageUrl = 'https://downloadable-pdf.vercel.app/link';
+
   return (
     <>
       <Head>
@@ -30,23 +30,6 @@ const Page: React.FC<Props> = ({ pageTitle, pageDescription, pageImageUrl, pageU
   );
 };
 
+export default Link;
 
-export const getServerSideProps = async () => {
-  
-  const pageTitle = 'Page Title';
-  const pageDescription = 'Page Description.';
-  const pageImageUrl = '/assets/table.png'; 
-  const pageUrl = 'https://downloadable-pdf.vercel.app/link';
-
-  return {
-    props: {
-      pageTitle,
-      pageDescription,
-      pageImageUrl,
-      pageUrl,
-    },
-  };
-};
-
-export default Page;
 
