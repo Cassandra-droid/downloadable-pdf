@@ -1,27 +1,52 @@
-import Head from "next/head";
+import Head from 'next/head';
 
-const Page: React.FC = () => {
+type Props = {
+  pageTitle: string;
+  pageDescription: string;
+  pageImageUrl: string;
+  pageUrl: string;
+};
+
+const Page: React.FC<Props> = ({ pageTitle, pageDescription, pageImageUrl, pageUrl }) => {
   return (
     <>
       <Head>
-        <title>Link Page</title>
-        <meta property="og:title" content="Link Page" />
-        <meta property="og:description" content=" Rich Link Preview Demo." />
-        <meta
-          property="og:image"
-          content="https://downloadable-pdf.vercel.app/assets/header.png"
-        />
-        <meta
-          property="og:url"
-          content="https://downloadable-pdf.vercel.app/link"
-        />
+        <title>{pageTitle}</title>
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content={pageImageUrl} />
+        <meta property="og:url" content={pageUrl} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={pageImageUrl} />
       </Head>
       <div>
-        <h1>Your Specified Page Content</h1>
+        <h1>{pageTitle}</h1>
+        <img src={pageImageUrl} alt="Shared content" style={{ maxWidth: '100%', height: 'auto' }} />
+        <p>{pageDescription}</p>
       </div>
     </>
   );
 };
 
+// Fetching dynamic data with getServerSideProps
+export const getServerSideProps = async () => {
+  
+  const pageTitle = 'Page Title';
+  const pageDescription = 'Page Description.';
+  const pageImageUrl = '/assets/table.png'; //
+  const pageUrl = 'https://downloadable-pdf.vercel.app/link';
+
+  return {
+    props: {
+      pageTitle,
+      pageDescription,
+      pageImageUrl,
+      pageUrl,
+    },
+  };
+};
+
 export default Page;
+
