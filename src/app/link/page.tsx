@@ -14,6 +14,8 @@ const Link: React.FC = () => {
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:image" content={pageImageUrl} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:url" content={pageUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
@@ -29,6 +31,7 @@ const Link: React.FC = () => {
 };
 
 export default Link;
+
 
 
 
