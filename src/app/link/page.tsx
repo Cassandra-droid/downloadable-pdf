@@ -30,12 +30,12 @@ const Page: React.FC<Props> = ({ pageTitle, pageDescription, pageImageUrl, pageU
   );
 };
 
-// Fetching dynamic data with getServerSideProps
+
 export const getServerSideProps = async () => {
   
   const pageTitle = 'Page Title';
   const pageDescription = 'Page Description.';
-  const pageImageUrl = '/assets/table.png'; //
+  const pageImageUrl = '/assets/table.png'; 
   const pageUrl = 'https://downloadable-pdf.vercel.app/link';
 
   return {
