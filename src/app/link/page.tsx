@@ -4,12 +4,13 @@ const Link: React.FC = () => {
   const pageTitle = "Your Specified Page Title";
   const pageDescription = "Description of your specified page.";
   const pageUrl = "https://downloadable-pdf.vercel.app/link";
-  const pageImageUrl = "/assets/table.png";
+  const pageImageUrl = "https://downloadable-pdf.vercel.app/assets/table.png";
 
   return (
     <>
       <Head>
         <title>{pageTitle}</title>
+        <meta property="og:type" content="website" />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:image" content={pageImageUrl} />
@@ -28,5 +29,6 @@ const Link: React.FC = () => {
 };
 
 export default Link;
+
 
 
