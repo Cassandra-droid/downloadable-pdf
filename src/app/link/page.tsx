@@ -1,12 +1,10 @@
+import Head from "next/head";
 
-import Head from 'next/head';
-
-const Link = async () => {
-
-  const pageTitle = 'Your Specified Page Title';
-  const pageDescription = 'Description of your specified page.';
-  const pageImageUrl = '/assets/table.png'; // Ensure this path is correct
-  const pageUrl = 'https://downloadable-pdf.vercel.app/link';
+const Link: React.FC = () => {
+  const pageTitle = "Your Specified Page Title";
+  const pageDescription = "Description of your specified page.";
+  const pageUrl = "https://downloadable-pdf.vercel.app/link";
+  const pageImageUrl = "https://downloadable-pdf.vercel.app/assets/table.png";
 
   return (
     <>
@@ -23,7 +21,6 @@ const Link = async () => {
       </Head>
       <div>
         <h1>{pageTitle}</h1>
-        <img src={pageImageUrl} alt="Shared content" style={{ maxWidth: '100%', height: 'auto' }} />
         <p>{pageDescription}</p>
       </div>
     </>
