@@ -28,6 +28,7 @@ const PaySlipForm: React.FC = () => {
   const [lst, setLst] = useState("");
   const [nssf, setNssf] = useState("");
   const [paye, setPaye] = useState("");
+  const [loan, setLoan] = useState("");
   const [netPay, setNetPay] = useState("");
 
   useEffect(() => {
@@ -103,25 +104,33 @@ const PaySlipForm: React.FC = () => {
       title: "NSSF",
       amount: nssf,
       titleX: 60,
-      titleY: 505,
+      titleY: 507,
       amountX: 400,
-      amountY: 505,
+      amountY: 507,
     },
     {
       title: "PAYE",
       amount: paye,
       titleX: 60,
-      titleY: 540.5,
+      titleY: 543,
       amountX: 400,
-      amountY: 540.5,
+      amountY: 543,
+    },
+    {
+      title: "Loan",
+      amount: loan,
+      titleX: 60,
+      titleY: 590,
+      amountX: 400,
+      amountY: 590,
     },
     {
       title: "NET PAY: ",
       amount: netPay,
-      titleX: 305,
-      titleY: 590,
+      titleX: 300,
+      titleY: 630,
       amountX: 400,
-      amountY: 589,
+      amountY: 629,
     },
   ];
 
@@ -269,7 +278,7 @@ const PaySlipForm: React.FC = () => {
           marginTop: 60,
         },
         netPay: {
-          fontSize: 16,
+          fontSize: 14,
           color: "white",
           bold: true,
         },
